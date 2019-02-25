@@ -1,7 +1,6 @@
 package com.example.itemanimator;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -46,6 +48,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements
                 return false;
             }
         });
+//        AlphaAnimation anim = new AlphaAnimation(0.0f, 1.0f);
+//        ScaleAnimation anim = new ScaleAnimation(0.0f, 1.0f, 0.0f, 1.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+//        anim.setDuration(1000);
+//        viewHolder.itemView.startAnimation(anim);
     }
 
     @Override

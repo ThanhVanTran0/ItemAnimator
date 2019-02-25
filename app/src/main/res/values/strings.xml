@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ItemAnimator</string>
+    <string name="html_text" formatted="false">
+        <![CDATA[
+            <font color=\'#28b5f5\'>Discover</font> and <font color=\'#28b5f5\'>play</font>games.
+        ]]>
+    </string>
 </resources>

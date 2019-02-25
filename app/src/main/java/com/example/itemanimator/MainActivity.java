@@ -1,12 +1,18 @@
 package com.example.itemanimator;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SimpleItemAnimator;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewPropertyAnimator;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -32,10 +38,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mAdapter = new Adapter(mList, this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+//        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
         mRecyclerView.setLayoutManager(layoutManager);
 
         DefaultItemAnimator itemAnimator = new DefaultItemAnimator();
-
+//        SimpleItemAnimator
         mRecyclerView.setItemAnimator(itemAnimator);
 
         ItemTouchHelper.Callback callback =
@@ -49,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAdd = findViewById(R.id.btnAdd);
         mEditText = findViewById(R.id.txtText);
         btnAdd.setOnClickListener(this);
+
     }
 
     @Override

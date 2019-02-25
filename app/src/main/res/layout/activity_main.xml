@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:text="add"
         android:layout_gravity="center_horizontal"
+        android:stateListAnimator="@animator/sl_animator"
         />
 
     <android.support.v7.widget.RecyclerView
